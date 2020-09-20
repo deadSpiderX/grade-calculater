@@ -1,0 +1,76 @@
+<doctype html>
+	<html>
+		<head>
+			<title>
+				Javascript project
+				</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<link rel="stylesheet" type="text/css" href="index.css"/>
+</head>
+<body>
+	<div class="main">
+		<div id="move">
+		<h1>Grade calculater</h1>
+		</div>
+		<form>
+		<input type="number" placeholder="Enter Maths Mark" id="math"/>
+		<input type="number" placeholder="Enter Science Mark" id="science"/>
+		<input type="number" placeholder="Enter English Mark" id="English"/>
+		<input type="number" placeholder="Enter Others Mark" id="others"/>
+			<button id="submit" onclick="output();">
+				Submit
+				</button>
+		</form>
+		<div id="logo">
+			<h2>Luck..!</h2>
+			</div>
+			<div id = "low">
+			<b id = "res"> Enter The Marks to Calculate</b>
+			</div>
+		</div>
+		<script>
+			function output(){
+				var math = 
+				document.getElementById("math").value;
+			var science = 
+			document.getElementById("science").value;
+		   var english =
+		   document.getElementById("English").value;
+		   var others =
+		   document.getElementById("others").value;
+		  // var tm = (math + science + english + others); 
+		  
+		  
+		  const min = Number(math);
+		  const sin = Number(science);
+		  const ein = Number(english);
+		  const oin = Number(others);
+		 const total = (min + sin + ein + oin);
+		 
+		 //logic building
+		 if (total < 100 ){
+//document.getElementById("res").innerHTML=
+		 alert	("Grade Is D And The Total Is : " + total );
+		 }
+	else if(total < 200 && total > 100){
+//document.getElementById("res").innerHTML=
+		alert("Grade Is C And The Total Is : " + total);
+	}
+	else if(total < 300 && total > 200){
+//document.getElementById("res").innerHTML=
+		("Grade Is B And The Total Is : " + total)
+	}
+	else if(total < 400 && total > 300){
+//document.getElementById("res").innerHTML=
+	alert	("Grade Is A And The Total Is : " + total);
+	}
+	else {
+//document.getElementById("res").innerHTML=
+	alert	("Please Enter a Valid Number");
+	}
+
+	}
+	
+			</script>
+	</body>
+</html>
